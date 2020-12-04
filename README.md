@@ -28,9 +28,11 @@ net = network.Network([784,100,10])
 
 ## Curent accuracy
 
+```
 Epoch 0: 856 / 10000, Test_Accuracy : 0.0856 %
 Epoch 1: 827 / 10000, Test_Accuracy : 0.0827 %
 Epoch 2: 814 / 10000, Test_Accuracy : 0.0814 %
+```
 
 ## Things to improve
 
