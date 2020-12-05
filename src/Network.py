@@ -1,6 +1,7 @@
 import numpy as np
 import random
 
+
 def sigmoid(z):
     "Sigmoid Function"
     return 1.0/(1.0+np.exp(-z))
@@ -79,7 +80,7 @@ class Network(object):
                 print("Epoch {0}: {1} / {2}, Test_Accuracy : {3} %".format(epoch, self.evaluate(test_data), num_of_test,self.evaluate(test_data)/num_of_test))
             else:
                 print("Epoc {0} complete".format(epoch))
-    
+        
     def update_mini_batch(self,mini_batch,eta):
         """Update the network’s weights and biases by applying
             gradient descent using backpropagation to a single mini batch.
