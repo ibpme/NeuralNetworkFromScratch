@@ -1,6 +1,6 @@
 # NeuralNetworkFromScratch
 
-A repository where I attempt to make a Simple Convolutional Neural Network from scratch with no framework for classifying the MNSIT dataset.
+A repository where I attempt to make a Simple Neural Network from scratch with no framework for classifying the MNSIT dataset.
 All the code and algorithm to build the network is inside the network.py file under src directory, alongside load_mnist.py to load the dataset
 
 ### Run
@@ -14,7 +14,7 @@ All the code and algorithm to build the network is inside the network.py file un
 Inside the main.py file you will find the code to customize the Neural Network
 You can run it manually using any python shell
 
-```
+```python
 import network
 import load_mnist
 training_data ,validation_data , test_data = load_mnist.load_preprocess_data()
@@ -28,11 +28,15 @@ net = network.Network([784,100,10])
 
 ## Curent accuracy
 
-```
+```s
 Epoch 0: 856 / 10000, Test_Accuracy : 0.0856 %
 Epoch 1: 827 / 10000, Test_Accuracy : 0.0827 %
 Epoch 2: 814 / 10000, Test_Accuracy : 0.0814 %
 ```
+
+## Exporting Model
+
+The model can now be exported to a JSON file where it contains the weights and biases and other information about the model . You can use the **model_to_json** module to do so inside the main.py file.
 
 ## Things to improve
 
