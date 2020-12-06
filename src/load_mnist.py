@@ -14,10 +14,15 @@ def load_data(validation_size = 10000):
 
 def load_preprocess_data():
     tr_d, va_d, te_d = load_data()
-    training_data = [(np.reshape(image, (784, 1))/255,label) for image,label in tr_d ]
+    training_data = [(np.reshape(image, (784, 1))/255,vectorized_output(int(label))) for image,label in tr_d ]
     validation_data = [(np.reshape(image, (784, 1))/255,label) for image,label in va_d ]
     test_data = [(np.reshape(image, (784, 1))/255,label) for image,label in te_d ]
     return (training_data, validation_data, test_data)
+
+def vectorized_output(label):
+    expected_output = np.zeros ((10 , 1))
+    expected_output[label] = 1.0
+    return expected_output
 
 if __name__ == "__main__":
     load_preprocess_data()
