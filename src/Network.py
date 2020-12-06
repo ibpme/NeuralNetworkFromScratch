@@ -77,7 +77,7 @@ class Network(object):
                 self.update_mini_batch(mini_batch,eta)
 
             if test_data :
-                print("Epoch {0}: {1} / {2}, Test_Accuracy : {3} %".format(epoch, self.evaluate(test_data), num_of_test,self.evaluate(test_data)/num_of_test))
+                print("Epoch {0}: {1} / {2}, Test_Accuracy : {3} %".format(epoch, self.evaluate(test_data), num_of_test,self.evaluate(test_data)*100/num_of_test))
             else:
                 print("Epoc {0} complete".format(epoch))
         
