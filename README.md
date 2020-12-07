@@ -18,7 +18,7 @@ You can run it manually using any python shell
 import network
 import load_mnist
 training_data ,validation_data , test_data = load_mnist.load_preprocess_data()
-net = network.Network([784,100,10])
+net = network.Network([784,30,10])
 ```
 
 ### Datasets
@@ -56,6 +56,10 @@ Epoch 14: 9421 / 10000, Test_Accuracy : 94.21 %
 ## Exporting Model
 
 The model can now be exported to a JSON file where it contains the weights and biases and other information about the model . You can use the **model_to_json** module to do so inside the main.py file.
+
+## Web Interface
+
+The current web interface for the Neural Network can be found [here](https://ibpme.github.io/NeuralNetworkFromScratch/)
 
 ## Things to improve
 
