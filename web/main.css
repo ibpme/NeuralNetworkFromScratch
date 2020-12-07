@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+.black-bg {
+  background-color: azure;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+#canvas {
+  border: 2px solid black;
+}
